@@ -22,7 +22,7 @@ else
     exit 0
 fi
 
-sudo apt update
+# sudo apt update
 
 echo "---------------------------------------------------------"
 echo "Installing samba"
