@@ -310,6 +310,9 @@ fi
 #             INSTALL SKIN RNSD              #
 ##############################################
 if [ -e /boot/skin.rnsd*.zip ]; then
+echo "---------------------------------------------------------"
+echo "INSTALL SKIN RNSD"
+echo "---------------------------------------------------------"
 	rm -r /home/pi/.kodi/addons/skin.rns*
 	unzip /boot/skin.rnsd*.zip -d /home/pi/.kodi/addons/ > /dev/null 2>&1
 	sed -i -e '$i \  <addon optional="true">skin.rnsd</addon>' /usr/share/kodi/system/addon-manifest.xml
@@ -346,12 +349,12 @@ EOF
 ##############################################
 #             INSTALL SKIN RNSE              #
 ##############################################
+#elif [ -e /boot/skin.rnse*.zip ]; then
+elif [ -e /home/pi/skin.rnse*.zip ]; then
 echo "---------------------------------------------------------"
 echo "INSTALL SKIN RNSE"
 echo "---------------------------------------------------------"
-#elif [ -e /boot/skin.rnse*.zip ]; then
-elif [ -e /home/pi/skin.rnse*.zip ]; then
-	rm -r /home/pi/.kodi/addons/skin.rns*
+ 	rm -r /home/pi/.kodi/addons/skin.rns*
 	unzip /home/pi/skin.rnse*.zip -d /home/pi/.kodi/addons/ > /dev/null 2>&1
 	sed -i -e '$i \  <addon optional="true">skin.rnse</addon>' /usr/share/kodi/system/addon-manifest.xml
 	sed -i -e 's/lookandfeel.skin" default="true">skin.estuary/lookandfeel.skin">skin.rnse/' /home/pi/.kodi/userdata/guisettings.xml
