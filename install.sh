@@ -346,6 +346,9 @@ EOF
 ##############################################
 #             INSTALL SKIN RNSE              #
 ##############################################
+echo "---------------------------------------------------------"
+echo "INSTALL SKIN RNSE"
+echo "---------------------------------------------------------"
 #elif [ -e /boot/skin.rnse*.zip ]; then
 elif [ -e /home/pi/skin.rnse*.zip ]; then
 	rm -r /home/pi/.kodi/addons/skin.rns*
